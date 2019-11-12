@@ -1,0 +1,28 @@
+<table class="table" id="reimb-table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Submit</th>
+            <th scope="col">Resolve</th>
+            <th scope="col">Description</th>
+            <th scope="col">Author</th>
+            <th scope="col">Resolver</th>
+            <th scope="col">Status</th>
+            <th scope="col">Type</th>
+        </tr>
+    </thead>
+    <tbody id="reimb-table-body">
+        <tr *ngFor="let reimb of reimbs">
+            <td>{{reimb.reimbId}}</td>
+            <td>{{reimb.reimbAmount}}</td>
+            <td>{{reimb.reimbSubmit | date : 'medium'}}</td>
+            <td>{{reimb.reimbResolve | date : 'medium'}}</td>
+            <td>{{reimb.reimbDescription}}</td>
+            <td>{{reimb.reimbAuthor}}</td>
+            <td>{{reimb.reimbResolver}}</td>
+            <td>{{reimb.reimbStatus}}</td>
+            <td>{{reimb.reimbType}}</td>
+        </tr>
+    </tbody>
+</table>

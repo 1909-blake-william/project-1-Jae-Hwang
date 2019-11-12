@@ -1,0 +1,7 @@
+#reimb-table {
+    text-align: center;
+}
+
+#reimb-table-body > tr > td + td {
+    border-left: 1px solid lightgray;
+}
