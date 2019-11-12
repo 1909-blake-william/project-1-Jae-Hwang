@@ -7,7 +7,7 @@ export class AppUser {
         public firstname = '',
         public lastname = '',
         public email = '',
-        public roleId = 0
+        public role = ''
     ) {}
 
 }

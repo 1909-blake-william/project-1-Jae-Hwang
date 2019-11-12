@@ -21,12 +21,17 @@ export class AuthService {
       withCredentials: true
     }).subscribe(
       data => {
-        console.log('logged in');
-        console.log(data);
-        this.currentUserStream.next(data);
+        if (data === null) {
+          console.log('not currently logged in');
+          this.router.navigateByUrl('/login');
+        } else {
+          console.log('logged in');
+          console.log(data);
+          this.currentUserStream.next(data);
+        }
       },
       err => {
-        console.log('not currently logged in')
+        console.log('not currently logged in');
       }
     );
   }
@@ -45,6 +50,10 @@ export class AuthService {
         this.loginErrorStream.next('Failed to Login');
       }
     );
+  }
+
+  logout() {
+    this.currentUserStream.next(null);
   }
 
 

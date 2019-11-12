@@ -83,7 +83,8 @@ Stored Procedures
 CREATE OR REPLACE PROCEDURE regist_reimbursement 
 (amount IN NUMBER,
 username IN VARCHAR2,
-type_str IN VARCHAR2)
+type_str IN VARCHAR2,
+desc IN VARCHAR2)
 IS
 a_id NUMBER;
 type_id NUMBER;
@@ -92,8 +93,8 @@ BEGIN
         WHERE ers_username = username;
     SELECT reimb_type_id INTO type_id FROM ers_reimbursement_type
         WHERE reimb_type = type_str;
-    INSERT INTO ers_reimbursement (reimb_id, reimb_amount, reimb_author, reimb_type_id)
-        VALUES (ers_reimb_id_seq.NEXTVAL, amount, a_id, type_id);
+    INSERT INTO ers_reimbursement (reimb_id, reimb_amount, reimb_description, reimb_author, reimb_type_id)
+        VALUES (ers_reimb_id_seq.NEXTVAL, amount, desc, a_id, type_id);
 END;
 /
 

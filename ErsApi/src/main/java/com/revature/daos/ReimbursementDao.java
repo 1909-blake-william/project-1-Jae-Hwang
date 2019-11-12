@@ -10,7 +10,7 @@ public interface ReimbursementDao {
 	
 	void save(Reimbursement reimb);
 	
-	void save(double amount, String username, String type);
+	void save(double amount, String username, String type, String desc);
 	
 	List<Reimbursement> findAll ();
 	
@@ -21,5 +21,7 @@ public interface ReimbursementDao {
 	List<Reimbursement> findByTypeId(int typeId);
 	
 	List<Reimbursement> findByStatusId(int statusId);
+	
+	void update();
 	
 }

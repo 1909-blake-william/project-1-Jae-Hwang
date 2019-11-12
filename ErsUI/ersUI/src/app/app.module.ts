@@ -14,6 +14,7 @@ import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './services/auth.service';
+import { UpdateService } from './services/update.service';
 import { ReimbursmentsComponent } from './components/reimbursments/reimbursments.component';
 
 @NgModule({
@@ -36,7 +37,8 @@ import { ReimbursmentsComponent } from './components/reimbursments/reimbursments
     FormsModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    UpdateService
   ],
   bootstrap: [AppComponent]
 })

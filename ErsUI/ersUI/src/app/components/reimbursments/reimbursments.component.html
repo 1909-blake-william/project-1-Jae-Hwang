@@ -10,6 +10,7 @@
             <th scope="col">Resolver</th>
             <th scope="col">Status</th>
             <th scope="col">Type</th>
+            <th scope="col" *ngIf="currentUser?.role==='Manager'"></th>
         </tr>
     </thead>
     <tbody id="reimb-table-body">
@@ -22,7 +23,8 @@
             <td>{{reimb.reimbAuthor}}</td>
             <td>{{reimb.reimbResolver}}</td>
             <td>{{reimb.reimbStatus}}</td>
-            <td>{{reimb.reimbType}}</td>
+            <td>{{reimb.reimbType}}</td> 
+            <td *ngIf="currentUser?.role==='Manager'">{{currentUser.username}}</td>
         </tr>
     </tbody>
 </table>

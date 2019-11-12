@@ -79,14 +79,15 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	}
 	
 	@Override
-	public void save(double amount, String username, String type) {
+	public void save(double amount, String username, String type, String desc) {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			CallableStatement cs = c.prepareCall("CALL regist_reimbursement(?, ?, ?)");
+			CallableStatement cs = c.prepareCall("CALL regist_reimbursement(?, ?, ?, ?)");
 			cs.setDouble(1, amount);
 			cs.setString(2, username);
 			cs.setString(3, type);
+			cs.setString(4, desc);
 			
 			cs.execute();
 			
