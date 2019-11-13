@@ -9,26 +9,28 @@ import { Router } from '@angular/router';
 })
 export class UpdateService {
 
-  currentReimbStream = new ReplaySubject<Reimb>(1);
-  $currentReimb = this.currentReimbStream.asObservable();
+  currentUpdateStream = new ReplaySubject<Reimb>(1);
+  $currentUpdate = this.currentUpdateStream.asObservable();
 
   constructor(private httpClient: HttpClient, private router: Router) {
-    this.httpClient.get<Reimb>('http://localhost:8080/ERSProject/auth/session-user', {
+
+  }
+
+  setUpdate(reimb: Reimb): Reimb[] {
+    this.httpClient.get<Reimb>(`http://localhost:8080/ERSProject/reimbursements?id=${reimb.reimbId}`, {
       withCredentials: true
     }).subscribe(
       data => {
-        if (data === null) {
-          console.log('Cannot get the data');
-          this.router.navigateByUrl('/reimbursements');
-        } else {
-          console.log('logged in');
-          console.log(data);
-          this.currentReimbStream.next(data);
-        }
+        console.log('logged in');
+        console.log(data);
+        this.currentUpdateStream.next(data);
+        return data;
       },
       err => {
-        console.log('not currently logged in');
+        console.log('failed to get the data.');
+        return null;
       }
     );
+    return null;
   }
 }

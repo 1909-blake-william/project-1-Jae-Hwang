@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ClickerComponent } from './clicker.component';
+import { RoleOptionComponent } from './role-option.component';
 
-describe('ClickerComponent', () => {
-  let component: ClickerComponent;
-  let fixture: ComponentFixture<ClickerComponent>;
+describe('RoleOptionComponent', () => {
+  let component: RoleOptionComponent;
+  let fixture: ComponentFixture<RoleOptionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ClickerComponent ]
+      declarations: [ RoleOptionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ClickerComponent);
+    fixture = TestBed.createComponent(RoleOptionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

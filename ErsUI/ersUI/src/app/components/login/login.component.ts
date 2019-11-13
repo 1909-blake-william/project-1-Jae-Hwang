@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit, OnDestroy {
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
+    // logout when user clicks logout
     this.authService.logout();
     // every time the subject publishes new content
     // it will invoke the subscriber method

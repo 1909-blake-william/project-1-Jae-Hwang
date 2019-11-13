@@ -4,30 +4,31 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from './services/auth.service';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './components/nav/nav.component';
-import { ClickerComponent } from './components/clicker/clicker.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { PokemonComponent } from './components/pokemon/pokemon.component';
 import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from './services/auth.service';
 import { UpdateService } from './services/update.service';
 import { ReimbursmentsComponent } from './components/reimbursments/reimbursments.component';
+import { ReimbService } from './services/reimb.service';
+import { RoleOptionComponent } from './components/role-option/role-option.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
-    ClickerComponent,
     NotFoundComponent,
     HomeComponent,
     LoginComponent,
     PokemonComponent,
     PokemonCardComponent,
-    ReimbursmentsComponent
+    ReimbursmentsComponent,
+    RoleOptionComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { ReimbursmentsComponent } from './components/reimbursments/reimbursments
   ],
   providers: [
     AuthService,
-    UpdateService
+    UpdateService,
+    ReimbService
   ],
   bootstrap: [AppComponent]
 })

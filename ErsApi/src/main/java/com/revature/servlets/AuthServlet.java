@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.daos.UserDao;
@@ -47,6 +48,13 @@ public class AuthServlet extends HttpServlet {
 				resp.getWriter().write(om.writeValueAsString(loggedInUser));
 				return;
 			}
+		} else if ("/ERSProject/auth/logout".equals(req.getRequestURI())) {
+			System.out.println("setting user on session to null");
+			HttpSession session = req.getSession();
+			session.setAttribute("user", null);
+			session.invalidate();
+			resp.getWriter().write(om.writeValueAsString(null));
+			return;
 		}
 	}
 

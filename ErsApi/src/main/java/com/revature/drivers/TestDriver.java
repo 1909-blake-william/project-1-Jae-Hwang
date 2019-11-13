@@ -48,7 +48,7 @@ public class TestDriver {
 		});
 		
 		try {
-			System.out.println(ou.om.writeValueAsString(reimbs));
+			System.out.println(ou.getOm().writeValueAsString(reimbs));
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
