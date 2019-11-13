@@ -24,7 +24,9 @@
             <td>{{reimb.reimbResolver}}</td>
             <td>{{reimb.reimbStatus}}</td>
             <td>{{reimb.reimbType}}</td> 
-            <td *ngIf="currentUser?.role==='Manager'">{{currentUser.username}}</td>
+            <td *ngIf="currentUser?.role==='Manager'">
+                <button (click)="toUpdate(reimb)">{{currentUser.username}}</button>
+            </td>
         </tr>
     </tbody>
 </table>

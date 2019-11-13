@@ -188,6 +188,30 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			return null;
 		}
 	}
+	
+	public List<Reimbursement> findByAuthor(String author) {
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			String sql = selectReimb
+					+ " WHERE auth.ers_username = ? ORDER BY reimb_id";
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setString(1, author);
+			
+			ResultSet rs = ps.executeQuery();
+			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
+			while (rs.next()) {
+				reimbs.add(extractReimbursement(rs));
+			}
+
+			return reimbs;
+
+		} catch (SQLException e) {
+			log.debug("connection failed");
+			// e.printStackTrace();
+			return null;
+		}
+	}
 
 	@Override
 	public List<Reimbursement> findByTypeId(int typeId) {
@@ -241,6 +265,12 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			// e.printStackTrace();
 			return null;
 		}
+	}
+
+	@Override
+	public void update() {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

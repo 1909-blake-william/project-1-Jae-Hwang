@@ -1,6 +1,7 @@
 package com.revature.servlets;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -11,10 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.daos.ReimbursementDao;
 import com.revature.models.Reimbursement;
+import com.revature.util.ObjectUtil;
 
 public class ReimbursementServlet extends HttpServlet {
 	
 	private ReimbursementDao reimbDao = ReimbursementDao.currentImplementation;
+	private ObjectMapper om = ObjectUtil.instance.getOm();
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -36,16 +39,19 @@ public class ReimbursementServlet extends HttpServlet {
 		
 		List<Reimbursement> reimbs;
 		
-		String author = req.getParameter("author");
+		String username = req.getParameter("username");
+		String strId = req.getParameter("id");
 		
-		if (author != null) {
-			int authorId = Integer.parseInt(author);
-			reimbs = reimbDao.findByAuthorId(authorId);
+		if (username != null) {
+			reimbs = reimbDao.findByAuthor(username);
+		} else if (strId != null) {
+			reimbs = new ArrayList<>();
+			int reimbId = Integer.valueOf(strId);
+			reimbs.add(reimbDao.findById(reimbId));
 		} else {
 			reimbs = reimbDao.findAll();
 		}
 		
-		ObjectMapper om = new ObjectMapper();
 		String json = om.writeValueAsString(reimbs);
 
 		resp.addHeader("content-type", "application/json");

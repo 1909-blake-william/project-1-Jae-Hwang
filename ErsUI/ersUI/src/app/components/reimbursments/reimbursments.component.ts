@@ -21,35 +21,48 @@ export class ReimbursmentsComponent implements OnInit, OnDestroy {
   constructor(private httpClient: HttpClient, private authService: AuthService, private updateService: UpdateService) { }
 
   ngOnInit() {
-    this.httpClient.get<Reimb[]>('http://localhost:8080/ERSProject/reimbursements', {
-      withCredentials: true
-    })
-      .subscribe(data => {
-        console.log(data);
-        this.reimbs = data;
-      }, err => {
-        console.log(err);
-      });
-
     // every time the subject publishes new content 
     // it will invoke the subscriber method
     this.userSubscription = this.authService.$currentUser.subscribe(user => {
       this.currentUser = user;
     });
+
+    if (this.currentUser.role === 'Manager') {
+      this.httpClient.get<Reimb[]>('http://localhost:8080/ERSProject/reimbursements', {
+        withCredentials: true
+      })
+        .subscribe(data => {
+          console.log(data);
+          this.reimbs = data;
+        }, err => {
+          console.log(err);
+        });
+    } else {
+      console.log(this.currentUser.username);
+      this.httpClient.get<Reimb[]>(`http://localhost:8080/ERSProject/reimbursements?username=${this.currentUser.username}`, {
+        withCredentials: true
+      })
+        .subscribe(data => {
+          console.log(data);
+          this.reimbs = data;
+        }, err => {
+          console.log(err);
+        });
+    }
   }
 
   ngOnDestroy() {
     this.userSubscription.unsubscribe();
   }
 
-  update(reimb: Reimb) {
-    this.httpClient.get<Reimb>(`http://localhost:8080/ERSProject/Reimbursement?id=${reimb.reimbId}`, {
+  toUpdate(reimb: Reimb) {
+    this.httpClient.get<Reimb>(`http://localhost:8080/ERSProject/reimbursements?id=${reimb.reimbId}`, {
       withCredentials: true
     }).subscribe(
       data => {
-          console.log('logged in');
-          console.log(data);
-          this.updateService.currentReimbStream.next(data);
+        console.log('logged in');
+        console.log(data);
+        this.updateService.currentReimbStream.next(data);
       },
       err => {
         console.log('failed to get the data.');
