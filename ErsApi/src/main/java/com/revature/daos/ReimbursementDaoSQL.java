@@ -51,7 +51,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	}
 	
 	@Override
-	public void save(Reimbursement reimb) {
+	public boolean save(Reimbursement reimb) {
 		try {
 			Connection c = connectionUtil.getConnection();
 
@@ -60,9 +60,11 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			cs.setString(2, reimb.getReimbAuthor());
 			cs.setString(3, reimb.getReimbType());
 			
-			cs.execute();
+			boolean result = cs.execute();
 			
 			c.commit();
+			
+			return result;
 			
 		} catch (SQLException e) {
 			log.debug("Request Failed");
@@ -75,11 +77,12 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 				log.debug("Connection failed");
 				e1.printStackTrace();
 			}
+			return false;
 		}
 	}
 	
 	@Override
-	public void save(double amount, String username, String type, String desc) {
+	public boolean save(double amount, String username, String type, String desc) {
 		try {
 			Connection c = connectionUtil.getConnection();
 
@@ -93,6 +96,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			
 			c.commit();
 			
+			return true;
+			
 		} catch (SQLException e) {
 			log.debug("Request Failed");
 			e.printStackTrace();
@@ -104,6 +109,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 				log.debug("Connection failed");
 				e1.printStackTrace();
 			}
+			
+			return false;
 		}
 	}
 
@@ -268,9 +275,33 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	}
 
 	@Override
-	public void update() {
-		// TODO Auto-generated method stub
-		
+	public void update(int userId, int statusId, int resolver) {
+//		UPDATE ers_reimbursement SET
+//		reimb_resolved = CURRENT_TIMESTAMP,
+//		reimb_resolver = 2,
+//		reimb_status_id = 4
+//		WHERE reimb_id = 2;
+		log.trace("attempting to find reimbs by status");
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			String sql = "UPDATE ers_reimbursement SET"
+					+ " reimb_resolved = CURRENT_TIMESTAMP,"
+					+ " reimb_resolver = 2,";
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setInt(1, statusId);
+			
+			ResultSet rs = ps.executeQuery();
+			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
+			while (rs.next()) {
+				reimbs.add(extractReimbursement(rs));
+			}
+
+
+		} catch (SQLException e) {
+			log.debug("connection failed");
+			// e.printStackTrace();
+		}
 	}
 
 }

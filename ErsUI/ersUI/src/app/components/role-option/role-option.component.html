@@ -1,28 +1,36 @@
 <form id="reimb-form" *ngIf="true">
-    <div class="form-row">
+    <div class="form-row thead-dark" id="reimb-form-head">
         <h5>Request Reimbursement: </h5>
     </div>
     <br>
     <div class="form-row">
         <div class="form-group col-lg-6">
             <label for="inputAmount">Amount</label>
-            <input type="text" class="form-control" id="inputAmount">
+            <input name="amount" type="number" class="form-control" id="inputAmount" required
+                [(ngModel)]="inputForm.reimbAmount">
         </div>
         <div class="form-group col-lg-6">
             <label for="inputType">Type</label>
-            <input type="text" class="form-control" id="inputType">
+            <input name="type" type="text" class="form-control" id="inputType" required
+                [(ngModel)]="inputForm.reimbType">
         </div>
     </div>
     <div class="form-row">
         <div class="form-group col-lg-12">
-            <label for="inputDesc">Description</label>
-            <textarea class="form-control" id="inputDesc" rows="4"></textarea>
+            <label for="inputDesc" class="reimb-form-text">Description</label>
+            <textarea name="desc" class="form-control" id="inputDesc" rows="4" required
+                [(ngModel)]="inputForm.reimbDesc"></textarea>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col reimb-form-text">
+            {{inputForm.message}}
         </div>
     </div>
     <br>
     <div class="form-row">
         <div class="form-group col" id="button-row">
-            <button type="submit" class="btn btn-secondary" id="reimb-form-button">
+            <button type="submit" class="btn btn-secondary" id="reimb-form-button" (click)="callStuff()">
                 Request
             </button>
         </div>

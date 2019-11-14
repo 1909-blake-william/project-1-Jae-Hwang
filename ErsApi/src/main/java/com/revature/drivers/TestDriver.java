@@ -46,12 +46,5 @@ public class TestDriver {
 		reimbs.forEach( reimb -> {
 			System.out.println(reimb);
 		});
-		
-		try {
-			System.out.println(ou.getOm().writeValueAsString(reimbs));
-		} catch (JsonProcessingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 }

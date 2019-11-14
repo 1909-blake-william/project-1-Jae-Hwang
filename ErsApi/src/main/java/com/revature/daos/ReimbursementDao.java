@@ -8,9 +8,9 @@ public interface ReimbursementDao {
 	
 	public final ReimbursementDao currentImplementation = new ReimbursementDaoSQL();
 	
-	void save(Reimbursement reimb);
+	boolean save(Reimbursement reimb);
 	
-	void save(double amount, String username, String type, String desc);
+	boolean save(double amount, String username, String type, String desc);
 	
 	List<Reimbursement> findAll ();
 	
@@ -25,6 +25,6 @@ public interface ReimbursementDao {
 	
 	List<Reimbursement> findByStatusId(int statusId);
 	
-	void update();
+	void update(int userId, int statusId, int resolver);
 	
 }

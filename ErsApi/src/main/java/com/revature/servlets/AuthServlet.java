@@ -27,7 +27,6 @@ public class AuthServlet extends HttpServlet {
 				"Origin, Methods, Credentials, X-Requested-With, Content-Type, Accept");
 		resp.addHeader("Access-Control-Allow-Credentials", "true");
 		resp.setContentType("application/json");
-		// TODO Auto-generated method stub
 		super.service(req, resp);
 	}
 
@@ -49,11 +48,11 @@ public class AuthServlet extends HttpServlet {
 				return;
 			}
 		} else if ("/ERSProject/auth/logout".equals(req.getRequestURI())) {
+			resp.setStatus(202);
 			System.out.println("setting user on session to null");
 			HttpSession session = req.getSession();
 			session.setAttribute("user", null);
 			session.invalidate();
-			resp.getWriter().write(om.writeValueAsString(null));
 			return;
 		}
 	}

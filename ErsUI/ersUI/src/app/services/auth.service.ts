@@ -54,7 +54,9 @@ export class AuthService {
 
   logout() {
     this.currentUserStream.next(null);
-    this.httpClient.post('http://localhost:8080/ERSProject/auth/logout', null).subscribe(
+    this.httpClient.post('http://localhost:8080/ERSProject/auth/logout', {
+      withCredentials: true
+    }).subscribe(
       data => {
         console.log('Logged out successfully');
       },
