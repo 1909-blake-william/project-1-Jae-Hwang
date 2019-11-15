@@ -41,6 +41,8 @@ public class ReimbursementServlet extends HttpServlet {
 
 		String username = req.getParameter("username");
 		String strId = req.getParameter("id");
+		String strStatus = req.getParameter("status");
+		String strType = req.getParameter("type");
 
 		if (username != null) {
 			reimbs = reimbDao.findByAuthor(username);

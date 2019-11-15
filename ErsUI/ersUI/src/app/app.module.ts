@@ -8,10 +8,7 @@ import { AuthService } from './services/auth.service';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavComponent } from './components/nav/nav.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { PokemonComponent } from './components/pokemon/pokemon.component';
-import { PokemonCardComponent } from './components/pokemon-card/pokemon-card.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateService } from './services/update.service';
 import { ReimbursmentsComponent } from './components/reimbursments/reimbursments.component';
@@ -23,10 +20,7 @@ import { RoleOptionComponent } from './components/role-option/role-option.compon
     AppComponent,
     NavComponent,
     NotFoundComponent,
-    HomeComponent,
     LoginComponent,
-    PokemonComponent,
-    PokemonCardComponent,
     ReimbursmentsComponent,
     RoleOptionComponent
   ],
