@@ -25,6 +25,6 @@ public interface ReimbursementDao {
 	
 	List<Reimbursement> findByStatusId(int statusId);
 	
-	void update(int userId, int statusId, int resolver);
+	boolean update(int reimbId, int statusId, int resolver);
 	
 }

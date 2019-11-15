@@ -3,6 +3,8 @@ import { Reimb } from '../model/reimb.model';
 import { ReplaySubject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { AppUser } from '../model/user.model';
+import { ReimbService } from './reimb.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,25 +14,22 @@ export class UpdateService {
   currentUpdateStream = new ReplaySubject<Reimb>(1);
   $currentUpdate = this.currentUpdateStream.asObservable();
 
-  constructor(private httpClient: HttpClient, private router: Router) {
+  constructor(private httpClient: HttpClient, private router: Router, private reimbService: ReimbService) { }
 
-  }
+  updateReimb(user: AppUser, reimb: Reimb, status: number) {
+    let requestUrl = `http://localhost:8080/ERSProject/reimbursements`;
+    requestUrl = requestUrl.concat(`?resolver=${user.userId}`);
+    requestUrl = requestUrl.concat(`&id=${reimb.reimbId}`);
+    requestUrl = requestUrl.concat(`&status=${status}`);
+    console.log(requestUrl);
 
-  setUpdate(reimb: Reimb): Reimb[] {
-    this.httpClient.get<Reimb>(`http://localhost:8080/ERSProject/reimbursements?id=${reimb.reimbId}`, {
+    this.httpClient.put(requestUrl, {
       withCredentials: true
-    }).subscribe(
-      data => {
-        console.log('logged in');
-        console.log(data);
-        this.currentUpdateStream.next(data);
-        return data;
-      },
-      err => {
-        console.log('failed to get the data.');
-        return null;
-      }
-    );
-    return null;
+    }).subscribe(data => {
+      console.log('Successfully updated.');
+      this.reimbService.getReimbs(user);
+    }, err => {
+      console.log('Update failed.');
+    });
   }
 }

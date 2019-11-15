@@ -14,29 +14,22 @@ import org.apache.log4j.Logger;
 
 import com.revature.models.Reimbursement;
 import com.revature.util.ConnectionUtil;
+import com.revature.util.ObjectUtil;
 
 public class ReimbursementDaoSQL implements ReimbursementDao {
 
-	private Logger log = Logger.getRootLogger();
+	private Logger log = ObjectUtil.instance.getLog();
 	private ConnectionUtil connectionUtil = ConnectionUtil.instance;
-	
-	// SQL statement using so many joins
-	private String selectReimb = "SELECT reimb_id,"
-									+ " reimb_amount," 
-									+ " reimb_submitted,"
-									+ " reimb_resolved,"
-									+ " reimb_description,"
-									+ " auth.ers_username author,"
-									+ " res.ers_username resolver,"
-									+ " reimb_type,"
-									+ " reimb_status"
-								+ " FROM ers_reimbursement"
-								+ " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
-								+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
-								+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
-								+ " JOIN ers_reimbursement_type type USING (reimb_type_id)";
 
-	private Reimbursement extractReimbursement (ResultSet rs) throws SQLException {
+	// SQL statement using so many joins
+	private String selectReimb = "SELECT reimb_id," + " reimb_amount," + " reimb_submitted," + " reimb_resolved,"
+			+ " reimb_description," + " auth.ers_username author," + " res.ers_username resolver," + " reimb_type,"
+			+ " reimb_status" + " FROM ers_reimbursement" + " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
+			+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
+			+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
+			+ " JOIN ers_reimbursement_type type USING (reimb_type_id)";
+
+	private Reimbursement extractReimbursement(ResultSet rs) throws SQLException {
 		int id = rs.getInt("reimb_id");
 		double amount = rs.getDouble("reimb_amount");
 		Timestamp submitted = rs.getTimestamp("reimb_submitted");
@@ -49,7 +42,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		Reimbursement result = new Reimbursement(id, amount, submitted, resolved, desc, author, resolver, status, type);
 		return result;
 	}
-	
+
 	@Override
 	public boolean save(Reimbursement reimb) {
 		try {
@@ -59,17 +52,17 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			cs.setDouble(1, reimb.getReimbAmount());
 			cs.setString(2, reimb.getReimbAuthor());
 			cs.setString(3, reimb.getReimbType());
-			
+
 			boolean result = cs.execute();
-			
+
 			c.commit();
-			
+
 			return result;
-			
+
 		} catch (SQLException e) {
 			log.debug("Request Failed");
 			e.printStackTrace();
-			
+
 			try {
 				log.debug("Attempting to rollback");
 				connectionUtil.getConnection().rollback();
@@ -80,7 +73,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			return false;
 		}
 	}
-	
+
 	@Override
 	public boolean save(double amount, String username, String type, String desc) {
 		try {
@@ -91,17 +84,15 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			cs.setString(2, username);
 			cs.setString(3, type);
 			cs.setString(4, desc);
-			
+
 			cs.execute();
-			
 			c.commit();
-			
 			return true;
-			
+
 		} catch (SQLException e) {
 			log.debug("Request Failed");
 			e.printStackTrace();
-			
+
 			try {
 				log.debug("Attempting to rollback");
 				connectionUtil.getConnection().rollback();
@@ -109,7 +100,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 				log.debug("Connection failed");
 				e1.printStackTrace();
 			}
-			
+
 			return false;
 		}
 	}
@@ -121,9 +112,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb
-					+ " ORDER BY reimb_id";
-			
+			String sql = selectReimb + " ORDER BY reimb_id";
+
 			PreparedStatement ps = c.prepareStatement(sql);
 
 			ResultSet rs = ps.executeQuery();
@@ -144,16 +134,15 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 
 	@Override
 	public Reimbursement findById(int reimbId) {
-		
+
 		log.trace("attempting to find a reimb by id");
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb
-					+ " WHERE reimb_id = ? ORDER BY reimb_id";
+			String sql = selectReimb + " WHERE reimb_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, reimbId);
-			
+
 			ResultSet rs = ps.executeQuery();
 			Reimbursement reimb = null;
 			if (rs.next()) {
@@ -171,16 +160,15 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 
 	@Override
 	public List<Reimbursement> findByAuthorId(int authorId) {
-		
+
 		log.trace("attempting to find reimbs by author");
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb
-					+ " WHERE reimb_author = ? ORDER BY reimb_id";
+			String sql = selectReimb + " WHERE reimb_author = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, authorId);
-			
+
 			ResultSet rs = ps.executeQuery();
 			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
 			while (rs.next()) {
@@ -195,16 +183,15 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			return null;
 		}
 	}
-	
+
 	public List<Reimbursement> findByAuthor(String author) {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb
-					+ " WHERE auth.ers_username = ? ORDER BY reimb_id";
+			String sql = selectReimb + " WHERE auth.ers_username = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, author);
-			
+
 			ResultSet rs = ps.executeQuery();
 			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
 			while (rs.next()) {
@@ -227,11 +214,10 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb
-					+ " WHERE reimb_type_id = ? ORDER BY reimb_id";
+			String sql = selectReimb + " WHERE reimb_type_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, typeId);
-			
+
 			ResultSet rs = ps.executeQuery();
 			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
 			while (rs.next()) {
@@ -254,11 +240,10 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb
-					+ " WHERE reimb_status_id = ? ORDER BY reimb_id";
+			String sql = selectReimb + " WHERE reimb_status_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, statusId);
-			
+
 			ResultSet rs = ps.executeQuery();
 			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
 			while (rs.next()) {
@@ -275,32 +260,43 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	}
 
 	@Override
-	public void update(int userId, int statusId, int resolver) {
+	public boolean update(int reimbId, int statusId, int resolver) {
 //		UPDATE ers_reimbursement SET
 //		reimb_resolved = CURRENT_TIMESTAMP,
 //		reimb_resolver = 2,
 //		reimb_status_id = 4
 //		WHERE reimb_id = 2;
-		log.trace("attempting to find reimbs by status");
+		log.trace("attempting to update reimbs by status");
 		try {
 			Connection c = connectionUtil.getConnection();
 
 			String sql = "UPDATE ers_reimbursement SET"
 					+ " reimb_resolved = CURRENT_TIMESTAMP,"
-					+ " reimb_resolver = 2,";
+					+ " reimb_resolver = ?,"
+					+ " reimb_status_id = ?"
+					+ " WHERE reimb_id = ?";
 			PreparedStatement ps = c.prepareStatement(sql);
-			ps.setInt(1, statusId);
+			ps.setInt(1, resolver);
+			ps.setInt(2, statusId);
+			ps.setInt(3, reimbId);
 			
-			ResultSet rs = ps.executeQuery();
-			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
-			while (rs.next()) {
-				reimbs.add(extractReimbursement(rs));
-			}
-
+			ps.executeQuery();
+			c.commit();
+			return true;
 
 		} catch (SQLException e) {
-			log.debug("connection failed");
-			// e.printStackTrace();
+			log.debug("Request Failed");
+			e.printStackTrace();
+
+			try {
+				log.debug("Attempting to rollback");
+				connectionUtil.getConnection().rollback();
+			} catch (SQLException e1) {
+				log.debug("Connection failed");
+				e1.printStackTrace();
+			}
+
+			return false;
 		}
 	}
 

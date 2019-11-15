@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.log4j.Logger;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.daos.UserDao;
 import com.revature.models.User;
@@ -17,6 +19,7 @@ public class AuthServlet extends HttpServlet {
 
 	private UserDao userDao = UserDao.currentImplementation;
 	private ObjectMapper om = ObjectUtil.instance.getOm();
+	private Logger log = ObjectUtil.instance.getLog();
 
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -39,9 +42,11 @@ public class AuthServlet extends HttpServlet {
 			User loggedInUser = userDao.findByUsernameAndPassword(credentials.getUsername(), credentials.getPassword());
 
 			if (loggedInUser == null) {
+				log.trace("User Credential does not match. 401");
 				resp.setStatus(401); // Unauthorized status code
 				return;
 			} else {
+				log.trace("User Credential match, creating and sending back the Session. 201");
 				resp.setStatus(201);
 				req.getSession().setAttribute("user", loggedInUser);
 				resp.getWriter().write(om.writeValueAsString(loggedInUser));
@@ -49,7 +54,7 @@ public class AuthServlet extends HttpServlet {
 			}
 		} else if ("/ERSProject/auth/logout".equals(req.getRequestURI())) {
 			resp.setStatus(202);
-			System.out.println("setting user on session to null");
+			log.trace("Attempting to setting user on session to null. 202 [Does not work]");
 			HttpSession session = req.getSession();
 			session.setAttribute("user", null);
 			session.invalidate();
@@ -61,6 +66,8 @@ public class AuthServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
 		if ("/ERSProject/auth/session-user".equals(req.getRequestURI())) {
+			log.trace("Sending current user Session 200");
+			resp.setStatus(200);
 			String json = om.writeValueAsString(req.getSession().getAttribute("user"));
 			resp.getWriter().write(json);
 		}

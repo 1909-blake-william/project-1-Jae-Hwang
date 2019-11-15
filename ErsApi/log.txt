@@ -1,0 +1,1142 @@
+2019-11-14 19:35:45 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-14 19:35:45 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-14 19:35:46 TRACE ReimbursementDaoSQL:112 - attempting to find all reimbs
+2019-11-14 19:35:46 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:35:46 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:35:46 TRACE UserDaoSQL:40 - attempting to find all reimbs
+2019-11-14 19:35:46 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:35:46 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:35:46 TRACE ReimbursementDaoSQL:165 - attempting to find reimbs by author
+2019-11-14 19:35:46 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:35:46 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:35:46 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:35:46 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:36 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-14 19:36:36 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-14 19:36:36 TRACE ReimbursementDaoSQL:112 - attempting to find all reimbs
+2019-11-14 19:36:36 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:36 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:37 TRACE UserDaoSQL:40 - attempting to find all reimbs
+2019-11-14 19:36:37 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:37 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:37 TRACE ReimbursementDaoSQL:165 - attempting to find reimbs by author
+2019-11-14 19:36:37 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:37 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:37 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:37 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:44 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-14 19:36:44 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-14 19:36:45 TRACE ReimbursementDaoSQL:112 - attempting to find all reimbs
+2019-11-14 19:36:45 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:45 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:45 TRACE UserDaoSQL:40 - attempting to find all reimbs
+2019-11-14 19:36:45 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:45 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:45 TRACE ReimbursementDaoSQL:165 - attempting to find reimbs by author
+2019-11-14 19:36:45 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:45 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:36:45 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:36:45 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:00 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-14 19:37:00 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-14 19:37:01 TRACE ReimbursementDaoSQL:112 - attempting to find all reimbs
+2019-11-14 19:37:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:01 TRACE UserDaoSQL:40 - attempting to find all reimbs
+2019-11-14 19:37:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:01 TRACE ReimbursementDaoSQL:165 - attempting to find reimbs by author
+2019-11-14 19:37:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:01 TRACE ReimbursementDaoSQL:270 - attempting to update reimbs by status
+2019-11-14 19:37:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:11 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-14 19:37:11 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-14 19:37:12 TRACE ReimbursementDaoSQL:112 - attempting to find all reimbs
+2019-11-14 19:37:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:12 TRACE UserDaoSQL:40 - attempting to find all reimbs
+2019-11-14 19:37:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:12 TRACE ReimbursementDaoSQL:165 - attempting to find reimbs by author
+2019-11-14 19:37:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 19:37:13 TRACE ReimbursementDaoSQL:270 - attempting to update reimbs by status
+2019-11-14 19:37:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 19:37:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:47 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-14 23:26:47 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-14 23:26:47 TRACE ReimbursementDaoSQL:111 - attempting to find all reimbs
+2019-11-14 23:26:47 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:47 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ReimbursementDaoSQL:164 - attempting to find reimbs by author
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:48 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:48 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:49 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:49 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:50 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:50 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:52 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:52 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:53 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:53 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:54 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:54 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:55 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:55 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:56 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:56 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:57 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:57 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:58 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:58 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:26:59 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:26:59 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:02 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:02 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:03 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:03 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:04 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:04 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:05 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:05 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:06 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:06 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:07 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:07 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:08 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:08 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:08 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:08 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:08 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:09 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:09 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:09 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:10 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:11 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:11 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:11 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:12 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:12 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:12 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:13 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:13 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:13 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:14 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:14 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:14 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:15 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:15 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:15 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:16 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:16 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:16 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:93 - Request Failed
+2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
+2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.

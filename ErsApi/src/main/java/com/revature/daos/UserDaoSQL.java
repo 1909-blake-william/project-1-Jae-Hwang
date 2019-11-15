@@ -11,10 +11,11 @@ import org.apache.log4j.Logger;
 
 import com.revature.models.User;
 import com.revature.util.ConnectionUtil;
+import com.revature.util.ObjectUtil;
 
 public class UserDaoSQL implements UserDao {
 
-	private Logger log = Logger.getRootLogger();
+	private Logger log = ObjectUtil.instance.getLog();
 	ConnectionUtil connectionUtil = ConnectionUtil.instance;
 
 	User extractUser(ResultSet rs) throws SQLException {

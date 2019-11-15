@@ -84,7 +84,7 @@ CREATE OR REPLACE PROCEDURE regist_reimbursement
 (amount IN NUMBER,
 username IN VARCHAR2,
 type_str IN VARCHAR2,
-desc IN VARCHAR2)
+des IN VARCHAR2)
 IS
 a_id NUMBER;
 type_id NUMBER;
@@ -94,7 +94,7 @@ BEGIN
     SELECT reimb_type_id INTO type_id FROM ers_reimbursement_type
         WHERE reimb_type = type_str;
     INSERT INTO ers_reimbursement (reimb_id, reimb_amount, reimb_description, reimb_author, reimb_type_id)
-        VALUES (ers_reimb_id_seq.NEXTVAL, amount, desc, a_id, type_id);
+        VALUES (ers_reimb_id_seq.NEXTVAL, amount, des, a_id, type_id);
 END;
 /
 
@@ -116,13 +116,19 @@ INSERT INTO ers_reimbursement_type (reimb_type_id, reimb_type)
     VALUES (ers_reimb_type_id_seq.NEXTVAL, 'Food');
 
 INSERT INTO ers_reimbursement_type (reimb_type_id, reimb_type)
-    VALUES (ers_reimb_type_id_seq.NEXTVAL, 'Others');
+    VALUES (ers_reimb_type_id_seq.NEXTVAL, 'Travel');
+
+INSERT INTO ers_reimbursement_type (reimb_type_id, reimb_type)
+    VALUES (ers_reimb_type_id_seq.NEXTVAL, 'Other');
 
 INSERT INTO ers_users (ers_user_id, ers_username, ers_password, user_first_name, user_last_name, user_email, user_role_id)
     VALUES (ers_user_id_seq.NEXTVAL, 'potato', 'pass', 'pot', 'ato', 'pot@to.roots', 1);
 
 INSERT INTO ers_users (ers_user_id, ers_username, ers_password, user_first_name, user_last_name, user_email, user_role_id)
-    VALUES (ers_user_id_seq.NEXTVAL, 'lettuce', 'pass', 'let', 'tuce', 'let@tuce.roots', 2);
+    VALUES (ers_user_id_seq.NEXTVAL, 'lettuce', 'pass', 'let', 'tuce', 'let@tuce.roots', 1);
+
+INSERT INTO ers_users (ers_user_id, ers_username, ers_password, user_first_name, user_last_name, user_email, user_role_id)
+    VALUES (ers_user_id_seq.NEXTVAL, 'adm', 'adm', 'ad', 'min', 'ad@min.roots', 2);
 
 
 INSERT INTO ers_reimbursement (reimb_id, reimb_amount, reimb_submitted, reimb_author, reimb_status_id, reimb_type_id)
@@ -136,3 +142,31 @@ INSERT INTO ers_reimbursement (reimb_id, reimb_amount, reimb_submitted, reimb_au
     
 INSERT INTO ers_reimbursement (reimb_id, reimb_amount, reimb_submitted, reimb_author, reimb_status_id, reimb_type_id)
     VALUES (ers_reimb_id_seq.NEXTVAL, 2000, CURRENT_TIMESTAMP, 2, 1, 2);
+
+
+
+/*******************************************************
+Pagination stuff
+*******************************************************/ /*
+SELECT 
+    reimb_id, 
+    reimb_amount, 
+    reimb_submitted, 
+    reimb_resolved, 
+    reimb_description, 
+    auth.ers_username author, 
+    res.ers_username resolver, 
+    reimb_type,
+    reimb_status
+FROM     
+(SELECT reimb.*,row_number() 
+    over (ORDER BY reimb.reimb_id ASC) line_number
+    FROM ers_reimbursement reimb)
+JOIN ers_users auth ON reimb_author = auth.ers_user_id
+FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id
+JOIN ers_reimbursement_status status USING (reimb_status_id)
+JOIN ers_reimbursement_type type USING (reimb_type_id)
+WHERE line_number BETWEEN 0 AND 200  ORDER BY line_number;
+
+SELECT count(*) FROM ers_reimbursement;
+*/

@@ -22,7 +22,7 @@ import { RoleOptionComponent } from './components/role-option/role-option.compon
     NotFoundComponent,
     LoginComponent,
     ReimbursmentsComponent,
-    RoleOptionComponent
+    RoleOptionComponent,
   ],
   imports: [
     BrowserModule,

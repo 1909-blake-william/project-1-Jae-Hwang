@@ -1,4 +1,5 @@
-<form id="reimb-form" *ngIf="true">
+<!-- Visible to None-Managers -->
+<form id="reimb-form" *ngIf="currentUser.role !== 'Manager'">
     <div class="form-row thead-dark" id="reimb-form-head">
         <h5>Request Reimbursement: </h5>
     </div>
@@ -27,12 +28,52 @@
             {{inputForm.message}}
         </div>
     </div>
-    <br>
     <div class="form-row">
-        <div class="form-group col" id="button-row">
-            <button type="submit" class="btn btn-secondary" id="reimb-form-button" (click)="callStuff()">
+        <div class="form-group col button-row">
+            <button type="submit" class="btn btn-secondary" id="reimb-form-button" (click)="callAdd()">
                 Request
             </button>
         </div>
     </div>
+</form>
+
+<!-- Only Visible to Managers -->
+<form id="reimb-form" *ngIf="currentUser.role === 'Manager'">
+    <div class="form-row thead-dark" id="reimb-form-head">
+        <h5>Update Reimbursement: </h5>
+    </div>
+    <div class="form-row">
+        <button ngbDropdown class="d-inline-block btn btn-secondary" id="reimb-id-button">
+            <a class="nav-link dropdown-toggle" id="reimb-update-drop" ngbDropdownToggle>{{updateDropMessage}}</a>
+            <div ngbDropdownMenu aria-labelledby="reimb-update-drop">
+                <button class="dropdown-item" *ngFor="let reimb of currentTable" (click)="selectUpdateDropdown(reimb)">
+                    {{reimb.reimbId}} : {{reimb.reimbAmount}} by {{reimb.reimbAuthor}}
+                </button>
+            </div>
+        </button>
+
+        <button ngbDropdown class="d-inline-block btn btn-secondary" id="reimb-status-button">
+            <a class="nav-link dropdown-toggle" id="status-update-drop" ngbDropdownToggle>{{updateStatusDrop}}</a>
+            <div ngbDropdownMenu aria-labelledby="status-update-drop">
+                <button class="dropdown-item" (click)="selectStatusDropdown(1)">Requested</button>
+                <button class="dropdown-item" (click)="selectStatusDropdown(2)">Pending</button>
+                <button class="dropdown-item" (click)="selectStatusDropdown(3)">Denied</button>
+                <button class="dropdown-item" (click)="selectStatusDropdown(4)">Approved</button>
+            </div>
+        </button>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col button-row">
+            <button class="btn btn-secondary" id="reimb-update-button" (click)="callUpdate()"> Update </button>
+        </div>
+    </div>
+
+    <div *ngIf="true">
+        <br>
+        <p>Resolver: {{currentUser.userId}}</p>
+        <p>Reimbursement Id: {{updateDropSelected?.reimbId}}</p>
+        <p>Status Id: {{updateStatusId}}</p>
+    </div>
+
 </form>

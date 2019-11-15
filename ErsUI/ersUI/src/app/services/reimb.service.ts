@@ -15,7 +15,7 @@ export class ReimbService {
   private insertMessageStream = new Subject<string>();
   $insertMessage = this.insertMessageStream.asObservable();
 
-  private availableType = ['Lodging', 'Food', 'Other'];
+  private availableType = ['Lodging', 'Food', 'Travel', 'Other'];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -55,19 +55,22 @@ export class ReimbService {
     if (amount <= 0) {
       message = 'Please, Enter valid amount for reimbursements.';
       this.insertMessageStream.next(message);
+      return;
     }
     if (!this.availableType.includes(type)) {
-      message = `'${type}' is not valid reimbursement type. Please enter one of following: [  `;
+      message = `'${type}' is not valid reimbursement type. Please enter one of following:  [  `;
       this.availableType.forEach(element => {
         message = message.concat(`${element}  `);
       });
       message = message.concat(']');
       console.log(message);
       this.insertMessageStream.next(message);
+      return;
     }
     if (desc.length > 100) {
       message = 'Description is too long. Maximum size for Description is 100 characters.';
       this.insertMessageStream.next(message);
+      return;
     }
 
     let requestUrl = `http://localhost:8080/ERSProject/reimbursements`;

@@ -3,5 +3,9 @@
 }
 
 #reimb-table-body > tr > td + td {
-    border-left: 1px solid lightgray;
+    border:opacify($color: #FFFFFF, $amount: 0); 
+}
+
+#reimb-table-head-row {
+    border-bottom: 2px solid #3c4044;
 }

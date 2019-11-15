@@ -1,6 +1,6 @@
 #reimb-form {
     border: lightgray solid 1px;
-    border-top: #343a40 solid 3em;
+    border-top: #3c4044 solid 3em;
     padding: 2em;
     margin: 10%;
     margin-top: 3em;
@@ -15,10 +15,28 @@
     border-bottom: lightgray solid 1px;
 }
 
-#button-row {
+.button-row {
+    margin-top: 1em;
     text-align: end;
 }
 
 .reimb-form-text {
     padding-top: 1em;
+}
+
+#reimb-id-button{
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#reimb-status-button{
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.dropdown-item:hover {
+    background-color: #3c4044;
+    color : white;
 }
