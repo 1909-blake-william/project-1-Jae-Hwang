@@ -19,9 +19,10 @@ public interface ReimbursementDao {
 	Reimbursement findById(int reimbId);
 	
 	List<Reimbursement> findByAuthorId(int userId);
-	
+
 	List<Reimbursement> findByAuthor(String author);
 	
+	List<Reimbursement> findByAuthorPag(String author, int page);
 	
 	List<Reimbursement> findByTypeId(int typeId);
 	

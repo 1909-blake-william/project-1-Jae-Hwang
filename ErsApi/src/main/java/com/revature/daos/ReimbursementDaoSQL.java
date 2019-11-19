@@ -25,6 +25,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	// Window > Pref > Java > Code Style > Formatter > Edit > On/Off Tags
 	
 	// SQL statement using so many joins
+	/*
 	private static final String SELECT_REIMB = 
 			"SELECT reimb_id," 
 				+ " reimb_amount," 
@@ -40,6 +41,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
 			+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
 			+ " JOIN ers_reimbursement_type type USING (reimb_type_id)";
+	*/
 	
 	// SQL statement using so many joins AND Pagination
 	// PLEASE REMEMBER TO SET 2 VALUES
@@ -62,7 +64,43 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
 		+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
 		+ " JOIN ers_reimbursement_type type USING (reimb_type_id)"
-		+ " WHERE line_number BETWEEN ? AND ?  ORDER BY line_number";
+	    + " WHERE line_number BETWEEN ? AND ?  ORDER BY line_number";
+	
+	private static final String SELECT_COLUMNS = 
+								"SELECT"
+								+ " reimb_id,"
+							    + " reimb_amount,"
+							    + " reimb_submitted,"
+							    + " reimb_resolved,"
+							    + " reimb_description,"
+							    + " auth.ers_username author,"
+							    + " res.ers_username resolver,"
+							    + " reimb_type,"
+							    + " reimb_status";
+	private static final String SELECT_FROM = " FROM ers_reimbursement";
+	
+	private static final String SELECT_JOINS =
+							  " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
+							+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
+							+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
+							+ " JOIN ers_reimbursement_type type USING (reimb_type_id)";
+	
+	private static final String SELECT_FROM_PAGE_FIND_ALL =
+							" FROM"     
+							+ " (SELECT reimb.*,row_number()"
+							+ " over (ORDER BY reimb.reimb_id ASC) line_number"
+							+ " FROM ers_reimbursement reimb)";
+	
+	private static final String SELECT_FROM_PAGE_BY_AUTHOR =
+							" FROM"     
+							+ " (SELECT reimb.*,row_number()"
+							+ " over (ORDER BY reimb.reimb_id ASC) line_number"
+							+ " FROM ers_reimbursement reimb"
+	  						+ " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
+							+ " WHERE auth.ers_username = ?)";
+	
+	private static final String SELECT_FROM_PAGE_END = 
+							  " WHERE line_number BETWEEN ? AND ?  ORDER BY line_number";
 // @formatter:on
 
 	private Reimbursement extractReimbursement(ResultSet rs) throws SQLException {
@@ -149,7 +187,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB + " ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " ORDER BY reimb_id";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 
@@ -172,11 +210,11 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	@Override
 	public List<Reimbursement> findAllPag(int page) {
 
-		log.trace("attempting to find all reimbs");
+		log.trace("attempting to find all reimbs WITH PAGE! : " + page);
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB_PAGE;
+			String sql = SELECT_COLUMNS + SELECT_FROM_PAGE_FIND_ALL + SELECT_JOINS + SELECT_FROM_PAGE_END;
 
 			PreparedStatement ps = c.prepareStatement(sql);
 			int rows = page * 10;
@@ -206,7 +244,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB + " WHERE reimb_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, reimbId);
 
@@ -232,7 +270,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB + " WHERE reimb_author = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_author = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, authorId);
 
@@ -255,9 +293,37 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB + " WHERE auth.ers_username = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE auth.ers_username = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, author);
+
+			ResultSet rs = ps.executeQuery();
+			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
+			while (rs.next()) {
+				reimbs.add(extractReimbursement(rs));
+			}
+
+			return reimbs;
+
+		} catch (SQLException e) {
+			log.debug("connection failed");
+			// e.printStackTrace();
+			return null;
+		}
+	}
+	
+	@Override
+	public List<Reimbursement> findByAuthorPag(String author, int page) {
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			int rows = page * 10;
+			
+			String sql = SELECT_COLUMNS + SELECT_FROM_PAGE_BY_AUTHOR + SELECT_JOINS + SELECT_FROM_PAGE_END;
+			PreparedStatement ps = c.prepareStatement(sql);
+			ps.setString(1, author);
+			ps.setInt(2, rows - 9);
+			ps.setInt(3, rows);
 
 			ResultSet rs = ps.executeQuery();
 			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
@@ -281,7 +347,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB + " WHERE reimb_type_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_type_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, typeId);
 
@@ -307,7 +373,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_REIMB + " WHERE reimb_status_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_status_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, statusId);
 

@@ -47,15 +47,22 @@ public class TestDriver {
 			System.out.println(reimb);
 		});
 		
-		
-		System.out.println("Pagination: 2");
-		reimbs = reimbDao.findAllPag(3);
+		System.out.println();
+		System.out.println("Pagination: 1");
+		reimbs = reimbDao.findAllPag(1);
 		reimbs.forEach( reimb -> {
 			System.out.println(reimb);
 		});
 		
-		//for (int i = 0; i < 1000; i++) {
-		//	reimbDao.save(100, "potato", "Other", "For pagination test.");
+		System.out.println();
+		System.out.println("Pagination: 1");
+		reimbs = reimbDao.findByAuthorPag("potato", 1);
+		reimbs.forEach( reimb -> {
+			System.out.println(reimb);
+		});
+		
+		//for (int i = 0; i < 10; i++) {
+		//	reimbDao.save(100, "potato", "Other", "For pagination test: " + i);
 		//}
 	}
 }
