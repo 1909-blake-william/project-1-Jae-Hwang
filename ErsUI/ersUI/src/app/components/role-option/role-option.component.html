@@ -12,8 +12,18 @@
         </div>
         <div class="form-group col-lg-6">
             <label for="inputType">Type</label>
-            <input name="type" type="text" class="form-control" id="inputType" required
-                [(ngModel)]="inputForm.reimbType">
+            <!--<input name="type" type="text" class="form-control" id="inputType" required
+                [(ngModel)]="inputForm.reimbType">-->
+            <br>
+            <button ngbDropdown class="d-inline-block btn btn-secondary col" id="insert-type-button">
+                <a class="nav-link dropdown-toggle" id="type-insert-drop" ngbDropdownToggle>{{insertTypeDrop}}</a>
+                <div ngbDropdownMenu aria-labelledby="type-insert-drop">
+                    <button class="dropdown-item" (click)="selectTypeDropdown('Lodging')">Lodging</button>
+                    <button class="dropdown-item" (click)="selectTypeDropdown('Food')">Food</button>
+                    <button class="dropdown-item" (click)="selectTypeDropdown('Travel')">Travel</button>
+                    <button class="dropdown-item" (click)="selectTypeDropdown('Other')">Other</button>
+                </div>
+            </button>
         </div>
     </div>
     <div class="form-row">
@@ -43,24 +53,29 @@
         <h5>Update Reimbursement: </h5>
     </div>
     <div class="form-row">
-        <button ngbDropdown class="d-inline-block btn btn-secondary" id="reimb-id-button">
-            <a class="nav-link dropdown-toggle" id="reimb-update-drop" ngbDropdownToggle>{{updateDropMessage}}</a>
-            <div ngbDropdownMenu aria-labelledby="reimb-update-drop">
-                <button class="dropdown-item" *ngFor="let reimb of currentTable" (click)="selectUpdateDropdown(reimb)">
-                    {{reimb.reimbId}} : {{reimb.reimbAmount}} by {{reimb.reimbAuthor}}
-                </button>
-            </div>
-        </button>
+        <div class="form-group col-lg-6">
+            <button ngbDropdown class="d-inline-block btn btn-secondary col" id="reimb-id-button">
+                <a class="nav-link dropdown-toggle" id="reimb-update-drop" ngbDropdownToggle>{{updateDropMessage}}</a>
+                <div ngbDropdownMenu aria-labelledby="reimb-update-drop">
+                    <button class="dropdown-item" *ngFor="let reimb of currentTable"
+                        (click)="selectUpdateDropdown(reimb)">
+                        {{reimb.reimbId}} : {{reimb.reimbAmount}} by {{reimb.reimbAuthor}}
+                    </button>
+                </div>
+            </button>
+        </div>
 
-        <button ngbDropdown class="d-inline-block btn btn-secondary" id="reimb-status-button">
-            <a class="nav-link dropdown-toggle" id="status-update-drop" ngbDropdownToggle>{{updateStatusDrop}}</a>
-            <div ngbDropdownMenu aria-labelledby="status-update-drop">
-                <button class="dropdown-item" (click)="selectStatusDropdown(1)">Requested</button>
-                <button class="dropdown-item" (click)="selectStatusDropdown(2)">Pending</button>
-                <button class="dropdown-item" (click)="selectStatusDropdown(3)">Denied</button>
-                <button class="dropdown-item" (click)="selectStatusDropdown(4)">Approved</button>
-            </div>
-        </button>
+        <div class="form-group col-lg-6">
+            <button ngbDropdown class="d-inline-block btn btn-secondary col" id="reimb-status-button">
+                <a class="nav-link dropdown-toggle" id="status-update-drop" ngbDropdownToggle>{{updateStatusDrop}}</a>
+                <div ngbDropdownMenu aria-labelledby="status-update-drop">
+                    <button class="dropdown-item" (click)="selectStatusDropdown(1)">Requested</button>
+                    <button class="dropdown-item" (click)="selectStatusDropdown(2)">Pending</button>
+                    <button class="dropdown-item" (click)="selectStatusDropdown(3)">Denied</button>
+                    <button class="dropdown-item" (click)="selectStatusDropdown(4)">Approved</button>
+                </div>
+            </button>
+        </div>
     </div>
 
     <div class="form-row">

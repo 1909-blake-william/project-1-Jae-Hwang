@@ -9,13 +9,14 @@ import { AppUser } from '../model/user.model';
 })
 export class ReimbService {
 
+  private storedTable = new Map();
+  private page: 1;
+
   private currentReimbsStream = new ReplaySubject<Reimb[]>(1);
   $currentReimbs = this.currentReimbsStream.asObservable();
 
   private insertMessageStream = new Subject<string>();
   $insertMessage = this.insertMessageStream.asObservable();
-
-  private availableType = ['Lodging', 'Food', 'Travel', 'Other'];
 
   constructor(private httpClient: HttpClient) { }
 
@@ -57,18 +58,18 @@ export class ReimbService {
       this.insertMessageStream.next(message);
       return;
     }
-    if (!this.availableType.includes(type)) {
-      message = `'${type}' is not valid reimbursement type. Please enter one of following:  [  `;
-      this.availableType.forEach(element => {
-        message = message.concat(`${element}  `);
-      });
-      message = message.concat(']');
-      console.log(message);
+    if (type === 'Type') {
+      message = `Please, select Type.`;
       this.insertMessageStream.next(message);
       return;
     }
     if (desc.length > 100) {
       message = 'Description is too long. Maximum size for Description is 100 characters.';
+      this.insertMessageStream.next(message);
+      return;
+    }
+    if (type === 'Other' && (desc.length < 3 || desc === 'Description')) {
+      message = 'Please, describe "Other" expense.';
       this.insertMessageStream.next(message);
       return;
     }

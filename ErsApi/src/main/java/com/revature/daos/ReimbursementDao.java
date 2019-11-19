@@ -12,7 +12,9 @@ public interface ReimbursementDao {
 	
 	boolean save(double amount, String username, String type, String desc);
 	
-	List<Reimbursement> findAll ();
+	List<Reimbursement> findAll();
+	
+	List<Reimbursement> findAllPag(int page);
 	
 	Reimbursement findById(int reimbId);
 	

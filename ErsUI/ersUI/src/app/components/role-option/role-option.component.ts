@@ -24,6 +24,8 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
 
   insertSubscription: Subscription;
 
+  insertTypeDrop = 'Select Type';
+
   currentTable: Reimb[];
   tableSubscription: Subscription;
 
@@ -64,6 +66,8 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
     }
   }
 
+
+  // -- Employee Methods -- //
   callAdd() {
     console.log('User clicked it!');
     this.reimbService.addReimb( // params below
@@ -73,6 +77,12 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
       this.inputForm.reimbDesc);
   }
 
+  selectTypeDropdown(selected: string) {
+    this.inputForm.reimbType = selected;
+    this.insertTypeDrop = selected;
+  }
+
+  // -- Manager Methods -- //
   callUpdate() {
     if (this.updateDropSelected && this.updateStatusId) {
       this.updateServie.updateReimb(this.currentUser, this.updateDropSelected, this.updateStatusId);

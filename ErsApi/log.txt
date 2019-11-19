@@ -1140,3 +1140,136 @@
 2019-11-14 23:27:17 DEBUG ReimbursementDaoSQL:97 - Attempting to rollback
 2019-11-14 23:27:17 TRACE ConnectionUtil:30 - Checking connection.
 2019-11-14 23:27:17 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:43:50 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:43:50 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:43:51 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:43:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:43:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:43:51 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:43:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:43:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:43:51 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:43:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:43:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:43:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:43:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:43:51 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:43:51 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:43:51 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:43:51 DEBUG ReimbursementDaoSQL:195 - connection failed
+2019-11-18 21:44:24 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:44:24 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:44:25 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:44:25 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:44:25 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:44:25 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:44:25 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:44:25 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:44:25 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:44:25 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:44:25 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:44:25 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:44:25 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:44:26 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:44:26 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:44:26 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:44:26 DEBUG ReimbursementDaoSQL:195 - connection failed
+2019-11-18 21:45:00 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:45:00 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:45:00 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:45:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:00 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:45:00 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:00 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:01 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:45:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:01 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:45:01 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:01 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:01 DEBUG ReimbursementDaoSQL:195 - connection failed
+2019-11-18 21:45:43 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:45:43 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:45:44 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:45:44 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:44 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:44 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:45:44 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:44 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:44 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:45:44 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:44 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:44 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:44 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:44 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:45:44 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:45:44 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:45:44 DEBUG ReimbursementDaoSQL:195 - connection failed
+2019-11-18 21:46:40 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:46:40 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:46:40 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:46:40 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:46:40 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:46:41 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:46:41 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:46:41 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:46:41 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:46:41 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:46:41 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:46:41 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:46:41 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:46:41 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:46:41 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:46:41 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:46:41 DEBUG ReimbursementDaoSQL:195 - connection failed
+2019-11-18 21:47:09 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:47:09 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:47:10 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:47:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:10 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:47:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:10 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:47:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:10 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:47:10 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:10 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:19 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:47:19 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:47:20 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:47:20 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:20 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:20 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:47:20 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:20 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:20 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:47:20 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:20 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:20 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:20 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:20 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:47:20 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:20 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:31 TRACE ConnectionUtil:53 - Trying to connect to the DB
+2019-11-18 21:47:32 TRACE ConnectionUtil:55 - Successfully connected to the DB
+2019-11-18 21:47:32 TRACE ReimbursementDaoSQL:148 - attempting to find all reimbs
+2019-11-18 21:47:32 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:32 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:33 TRACE UserDaoSQL:41 - attempting to find all reimbs
+2019-11-18 21:47:33 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:33 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:33 TRACE ReimbursementDaoSQL:231 - attempting to find reimbs by author
+2019-11-18 21:47:33 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:33 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:33 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:33 TRACE ConnectionUtil:48 - Connection successfully retrieved.
+2019-11-18 21:47:33 TRACE ReimbursementDaoSQL:175 - attempting to find all reimbs
+2019-11-18 21:47:33 TRACE ConnectionUtil:30 - Checking connection.
+2019-11-18 21:47:33 TRACE ConnectionUtil:48 - Connection successfully retrieved.

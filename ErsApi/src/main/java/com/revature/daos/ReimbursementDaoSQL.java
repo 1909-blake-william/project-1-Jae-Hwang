@@ -21,13 +21,49 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	private Logger log = ObjectUtil.instance.getLog();
 	private ConnectionUtil connectionUtil = ConnectionUtil.instance;
 
+// @formatter:off
+	// Window > Pref > Java > Code Style > Formatter > Edit > On/Off Tags
+	
 	// SQL statement using so many joins
-	private String selectReimb = "SELECT reimb_id," + " reimb_amount," + " reimb_submitted," + " reimb_resolved,"
-			+ " reimb_description," + " auth.ers_username author," + " res.ers_username resolver," + " reimb_type,"
-			+ " reimb_status" + " FROM ers_reimbursement" + " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
+	private static final String SELECT_REIMB = 
+			"SELECT reimb_id," 
+				+ " reimb_amount," 
+				+ " reimb_submitted," 
+				+ " reimb_resolved,"
+				+ " reimb_description," 
+				+ " auth.ers_username author," 
+				+ " res.ers_username resolver," 
+				+ " reimb_type,"
+				+ " reimb_status" 
+		 + " FROM ers_reimbursement" 
+			+ " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
 			+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
 			+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
 			+ " JOIN ers_reimbursement_type type USING (reimb_type_id)";
+	
+	// SQL statement using so many joins AND Pagination
+	// PLEASE REMEMBER TO SET 2 VALUES
+	private static final String SELECT_REIMB_PAGE = 
+			"SELECT"
+			+ " reimb_id,"
+		    + " reimb_amount,"
+		    + " reimb_submitted,"
+		    + " reimb_resolved,"
+		    + " reimb_description,"
+		    + " auth.ers_username author,"
+		    + " res.ers_username resolver,"
+		    + " reimb_type,"
+		    + " reimb_status"
+		+ " FROM"     
+			+ " (SELECT reimb.*,row_number()"
+			+ " over (ORDER BY reimb.reimb_id ASC) line_number"
+			+ " FROM ers_reimbursement reimb)"
+		+ " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
+		+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
+		+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
+		+ " JOIN ers_reimbursement_type type USING (reimb_type_id)"
+		+ " WHERE line_number BETWEEN ? AND ?  ORDER BY line_number";
+// @formatter:on
 
 	private Reimbursement extractReimbursement(ResultSet rs) throws SQLException {
 		int id = rs.getInt("reimb_id");
@@ -41,6 +77,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		String type = rs.getString("reimb_type");
 		Reimbursement result = new Reimbursement(id, amount, submitted, resolved, desc, author, resolver, status, type);
 		return result;
+
 	}
 
 	@Override
@@ -112,7 +149,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb + " ORDER BY reimb_id";
+			String sql = SELECT_REIMB + " ORDER BY reimb_id";
 
 			PreparedStatement ps = c.prepareStatement(sql);
 
@@ -133,13 +170,43 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	}
 
 	@Override
+	public List<Reimbursement> findAllPag(int page) {
+
+		log.trace("attempting to find all reimbs");
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			String sql = SELECT_REIMB_PAGE;
+
+			PreparedStatement ps = c.prepareStatement(sql);
+			int rows = page * 10;
+			ps.setInt(1, rows - 9);
+			ps.setInt(2, rows);
+
+			ResultSet rs = ps.executeQuery();
+			List<Reimbursement> reimbs = new ArrayList<Reimbursement>();
+			while (rs.next()) {
+				reimbs.add(extractReimbursement(rs));
+			}
+
+			return reimbs;
+
+		} catch (SQLException e) {
+			log.debug("connection failed");
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
+	@Override
 	public Reimbursement findById(int reimbId) {
 
 		log.trace("attempting to find a reimb by id");
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb + " WHERE reimb_id = ? ORDER BY reimb_id";
+			String sql = SELECT_REIMB + " WHERE reimb_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, reimbId);
 
@@ -165,7 +232,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb + " WHERE reimb_author = ? ORDER BY reimb_id";
+			String sql = SELECT_REIMB + " WHERE reimb_author = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, authorId);
 
@@ -188,7 +255,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb + " WHERE auth.ers_username = ? ORDER BY reimb_id";
+			String sql = SELECT_REIMB + " WHERE auth.ers_username = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, author);
 
@@ -214,7 +281,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb + " WHERE reimb_type_id = ? ORDER BY reimb_id";
+			String sql = SELECT_REIMB + " WHERE reimb_type_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, typeId);
 
@@ -240,7 +307,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = selectReimb + " WHERE reimb_status_id = ? ORDER BY reimb_id";
+			String sql = SELECT_REIMB + " WHERE reimb_status_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, statusId);
 
@@ -270,16 +337,13 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = "UPDATE ers_reimbursement SET"
-					+ " reimb_resolved = CURRENT_TIMESTAMP,"
-					+ " reimb_resolver = ?,"
-					+ " reimb_status_id = ?"
-					+ " WHERE reimb_id = ?";
+			String sql = "UPDATE ers_reimbursement SET" + " reimb_resolved = CURRENT_TIMESTAMP,"
+					+ " reimb_resolver = ?," + " reimb_status_id = ?" + " WHERE reimb_id = ?";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, resolver);
 			ps.setInt(2, statusId);
 			ps.setInt(3, reimbId);
-			
+
 			ps.executeQuery();
 			c.commit();
 			return true;
