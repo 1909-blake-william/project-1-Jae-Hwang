@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { AppUser } from '../model/user.model';
 import { ReplaySubject, Subject } from 'rxjs';
+import { identifierModuleUrl } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,6 @@ export class AuthService {
 
   private loginErrorStream = new Subject<string>();
   $loginError = this.loginErrorStream.asObservable();
-
 
   constructor(private httpClient: HttpClient, private router: Router) {
     this.httpClient.get<AppUser>('http://localhost:8080/ERSProject/auth/session-user', {

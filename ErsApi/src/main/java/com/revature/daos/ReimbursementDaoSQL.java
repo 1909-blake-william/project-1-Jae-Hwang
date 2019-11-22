@@ -6,19 +6,18 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.sql.Types;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.revature.models.Reimbursement;
 import com.revature.util.ConnectionUtil;
-import com.revature.util.ObjectUtil;
 
 public class ReimbursementDaoSQL implements ReimbursementDao {
 
-	private Logger log = ObjectUtil.instance.getLog();
+	private Logger log = LogManager.getRootLogger();
 	private ConnectionUtil connectionUtil = ConnectionUtil.instance;
 
 // @formatter:off
@@ -45,26 +44,6 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	
 	// SQL statement using so many joins AND Pagination
 	// PLEASE REMEMBER TO SET 2 VALUES
-	private static final String SELECT_REIMB_PAGE = 
-			"SELECT"
-			+ " reimb_id,"
-		    + " reimb_amount,"
-		    + " reimb_submitted,"
-		    + " reimb_resolved,"
-		    + " reimb_description,"
-		    + " auth.ers_username author,"
-		    + " res.ers_username resolver,"
-		    + " reimb_type,"
-		    + " reimb_status"
-		+ " FROM"     
-			+ " (SELECT reimb.*,row_number()"
-			+ " over (ORDER BY reimb.reimb_id ASC) line_number"
-			+ " FROM ers_reimbursement reimb)"
-		+ " JOIN ers_users auth ON reimb_author = auth.ers_user_id"
-		+ " FULL JOIN ers_users res ON reimb_resolver = res.ers_user_id"
-		+ " JOIN ers_reimbursement_status status USING (reimb_status_id)"
-		+ " JOIN ers_reimbursement_type type USING (reimb_type_id)"
-	    + " WHERE line_number BETWEEN ? AND ?  ORDER BY line_number";
 	
 	private static final String SELECT_COLUMNS = 
 								"SELECT"
@@ -244,7 +223,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
+					+ " WHERE reimb_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, reimbId);
 
@@ -270,7 +250,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_author = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
+					+ " WHERE reimb_author = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, authorId);
 
@@ -293,7 +274,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE auth.ers_username = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
+					+ " WHERE auth.ers_username = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, author);
 
@@ -347,7 +329,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_type_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
+					+ " WHERE reimb_type_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, typeId);
 
@@ -373,7 +356,8 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_status_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
+					+ " WHERE reimb_status_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, statusId);
 

@@ -17,7 +17,7 @@ export class UpdateService {
   constructor(private httpClient: HttpClient, private router: Router, private reimbService: ReimbService) { }
 
   updateReimb(user: AppUser, reimb: Reimb, status: number) {
-    let requestUrl = `http://localhost:8080/ERSProject/reimbursements`;
+    let requestUrl = `http://localhost:8080/ERSProject/fc/reimbursements`;
     requestUrl = requestUrl.concat(`?resolver=${user.userId}`);
     requestUrl = requestUrl.concat(`&id=${reimb.reimbId}`);
     requestUrl = requestUrl.concat(`&status=${status}`);

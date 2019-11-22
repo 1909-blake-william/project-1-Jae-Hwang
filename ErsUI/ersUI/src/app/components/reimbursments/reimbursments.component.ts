@@ -13,6 +13,9 @@ import { Router } from '@angular/router';
 })
 export class ReimbursmentsComponent implements OnInit, OnDestroy {
 
+  page = 2;
+  maxPage = 3;
+
   currentUser: AppUser;
   userSubscription: Subscription;
 
@@ -50,6 +53,26 @@ export class ReimbursmentsComponent implements OnInit, OnDestroy {
     }
     if (this.tableSubscription !== undefined) {
       this.tableSubscription.unsubscribe();
+    }
+  }
+
+  clickedPage(num: number) {
+    if (this.page === num) {
+      return 'page-item active';
+    } else {
+      return 'page-item';
+    }
+  }
+
+  pageUp() {
+    if (this.page < this.maxPage) {
+      this.page++;
+    }
+  }
+
+  pageDown() {
+    if (this.page > 1) {
+      this.page--;
     }
   }
 }

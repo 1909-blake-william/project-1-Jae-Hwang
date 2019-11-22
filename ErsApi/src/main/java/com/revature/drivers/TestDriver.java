@@ -2,6 +2,9 @@ package com.revature.drivers;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.revature.daos.ReimbursementDao;
 import com.revature.daos.UserDao;
@@ -16,9 +19,11 @@ public class TestDriver {
 	static ReimbursementDao reimbDao = ReimbursementDao.currentImplementation;
 	static UserDao userDao = UserDao.currentImplementation;
 	private static ObjectUtil ou = ObjectUtil.instance;
+	
+	static Logger logger = LogManager.getLogger(TestDriver.class);
 
 	public static void main(String[] args) {
-		
+		logger.info("Hello, world!");
 		connectionUtil.setConnection();
 		
 		List<Reimbursement> reimbs = reimbDao.findAll();

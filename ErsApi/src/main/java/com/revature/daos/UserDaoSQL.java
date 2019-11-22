@@ -7,15 +7,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.revature.models.User;
 import com.revature.util.ConnectionUtil;
-import com.revature.util.ObjectUtil;
 
 public class UserDaoSQL implements UserDao {
 
-	private Logger log = ObjectUtil.instance.getLog();
+	private Logger log = LogManager.getRootLogger();
 	ConnectionUtil connectionUtil = ConnectionUtil.instance;
 
 	User extractUser(ResultSet rs) throws SQLException {

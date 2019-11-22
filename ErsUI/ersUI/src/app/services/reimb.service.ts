@@ -28,7 +28,7 @@ export class ReimbService {
       console.log('Logged in at Reimb Service');
     }
     if (user.role === 'Manager') {
-      this.httpClient.get<Reimb[]>('http://localhost:8080/ERSProject/reimbursements', {
+      this.httpClient.get<Reimb[]>('http://localhost:8080/ERSProject/fc/reimbursements', {
         withCredentials: true
       })
         .subscribe(data => {
@@ -39,7 +39,7 @@ export class ReimbService {
         });
     } else {
       console.log(user.username);
-      this.httpClient.get<Reimb[]>(`http://localhost:8080/ERSProject/reimbursements?username=${user.username}`, {
+      this.httpClient.get<Reimb[]>(`http://localhost:8080/ERSProject/fc/reimbursements?username=${user.username}`, {
         withCredentials: true
       })
         .subscribe(data => {
@@ -74,7 +74,7 @@ export class ReimbService {
       return;
     }
 
-    let requestUrl = `http://localhost:8080/ERSProject/reimbursements`;
+    let requestUrl = `http://localhost:8080/ERSProject/fc/reimbursements`;
     requestUrl = requestUrl.concat(`?author=${user.username}`);
     requestUrl = requestUrl.concat(`&amount=${amount}`);
     requestUrl = requestUrl.concat(`&type=${type}`);

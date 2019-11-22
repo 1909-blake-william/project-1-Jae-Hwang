@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.daos.UserDao;
@@ -19,19 +20,7 @@ public class AuthServlet extends HttpServlet {
 
 	private UserDao userDao = UserDao.currentImplementation;
 	private ObjectMapper om = ObjectUtil.instance.getOm();
-	private Logger log = ObjectUtil.instance.getLog();
-
-	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println(req.getRequestURL());
-		resp.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-		resp.addHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, HEAD");
-		resp.addHeader("Access-Control-Allow-Headers",
-				"Origin, Methods, Credentials, X-Requested-With, Content-Type, Accept");
-		resp.addHeader("Access-Control-Allow-Credentials", "true");
-		resp.setContentType("application/json");
-		super.service(req, resp);
-	}
+	private Logger log = LogManager.getRootLogger();
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -9,7 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.revature.daos.ReimbursementDao;
@@ -20,23 +21,12 @@ public class ReimbursementServlet extends HttpServlet {
 
 	private ReimbursementDao reimbDao = ReimbursementDao.currentImplementation;
 	private ObjectMapper om = ObjectUtil.instance.getOm();
-	private Logger log = ObjectUtil.instance.getLog();
+	private Logger log = LogManager.getRootLogger();
 
 	@Override
-	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println(req.getRequestURL());
-		resp.addHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-		resp.addHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE, HEAD");
-		resp.addHeader("Access-Control-Allow-Headers",
-				"Origin, Methods, Credentials, X-Requested-With, Content-Type, Accept");
-		resp.addHeader("Access-Control-Allow-Credentials", "true");
-		resp.setContentType("application/json");
-		super.service(req, resp);
-
-	}
-
-	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
+		
 		System.out.println("uri = " + req.getRequestURI());
 
 		List<Reimbursement> reimbs;
@@ -69,8 +59,10 @@ public class ReimbursementServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		System.out.println("Reimbursement doPost");
+	protected void doPut(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
+		
+		System.out.println("Reimbursement doPut");
 		System.out.println("uri = " + req.getRequestURI());
 		System.out.println("url = " + req.getRequestURL());
 		
@@ -99,7 +91,8 @@ public class ReimbursementServlet extends HttpServlet {
 	}
 
 	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
+			throws ServletException, IOException {
 		
 		System.out.println("Reimbursement doPost");
 		System.out.println("uri = " + req.getRequestURI());
@@ -119,7 +112,7 @@ public class ReimbursementServlet extends HttpServlet {
 		boolean result = reimbDao.save(amount, author, type, desc);
 		
 		if (result) {
-			log.trace("Insert Successful, 204");
+			log.trace("Insert Successful, 201");
 			resp.setStatus(201);	
 		} else {
 			log.trace("Invalid input for Insert, 400");

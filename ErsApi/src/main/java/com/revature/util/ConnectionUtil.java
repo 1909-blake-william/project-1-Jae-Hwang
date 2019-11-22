@@ -4,11 +4,12 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ConnectionUtil {
 
-	Logger log = Logger.getRootLogger();
+	private Logger log = LogManager.getRootLogger();
 
 	public static final ConnectionUtil instance = new ConnectionUtil();
 
