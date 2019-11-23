@@ -18,12 +18,10 @@ public class TestDriver {
 	static ConnectionUtil connectionUtil = ConnectionUtil.instance;
 	static ReimbursementDao reimbDao = ReimbursementDao.currentImplementation;
 	static UserDao userDao = UserDao.currentImplementation;
-	private static ObjectUtil ou = ObjectUtil.instance;
 	
 	static Logger logger = LogManager.getLogger(TestDriver.class);
 
 	public static void main(String[] args) {
-		logger.info("Hello, world!");
 		connectionUtil.setConnection();
 		
 		List<Reimbursement> reimbs = reimbDao.findAll();
@@ -69,5 +67,9 @@ public class TestDriver {
 		//for (int i = 0; i < 10; i++) {
 		//	reimbDao.save(100, "potato", "Other", "For pagination test: " + i);
 		//}
+		
+		System.out.println();
+		System.out.println("Row Count: " + reimbDao.getMaxPage());
+		System.out.println("Row Count with uid potato: " + reimbDao.getMaxPageAuthor("potato"));
 	}
 }

@@ -236,6 +236,8 @@ public class ReimbursementDispatcher implements Dispatcher {
 			resp.addHeader("content-type", "application/json");
 			try {
 				resp.getOutputStream().write(Json.write(reimbs));
+				resp.addHeader("Access-Control-Expose-Headers", "X-page");
+				resp.addHeader("X-page", reimbDao.getMaxPage());
 				resp.setStatus(HttpServletResponse.SC_OK);
 				return true;
 			} catch (IOException e) {
@@ -248,7 +250,7 @@ public class ReimbursementDispatcher implements Dispatcher {
 	}
 	
 	//
-	// -- find by Author 6
+	// -- find by Author with page 6
 	public boolean isFindByAuthorPage(HttpServletRequest req) {
 		if ("/ERSProject/fc/reimbursements".equals(req.getRequestURI()) && "GET".equals(req.getMethod())
 				&& req.getParameter("username") != null
@@ -276,6 +278,8 @@ public class ReimbursementDispatcher implements Dispatcher {
 			resp.addHeader("content-type", "application/json");
 			try {
 				resp.getOutputStream().write(Json.write(reimbs));
+				resp.addHeader("Access-Control-Expose-Headers", "X-page");
+				resp.addHeader("X-page", reimbDao.getMaxPageAuthor(username));
 				resp.setStatus(HttpServletResponse.SC_OK);
 				return true;
 			} catch (IOException e) {

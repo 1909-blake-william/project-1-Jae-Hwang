@@ -27,7 +27,7 @@ export class UpdateService {
       withCredentials: true
     }).subscribe(data => {
       console.log('Successfully updated.');
-      this.reimbService.getReimbs(user);
+      this.reimbService.getReimbs(user, 0);
     }, err => {
       console.log('Update failed.');
     });

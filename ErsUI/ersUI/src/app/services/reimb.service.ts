@@ -9,42 +9,70 @@ import { AppUser } from '../model/user.model';
 })
 export class ReimbService {
 
-  private storedTable = new Map();
-  private page: 1;
-
   private currentReimbsStream = new ReplaySubject<Reimb[]>(1);
   $currentReimbs = this.currentReimbsStream.asObservable();
+
+  private maxPageStream = new ReplaySubject<number>(1);
+  $maxPage = this.maxPageStream.asObservable();
+  maxPage: number;
+
+  currentPage = 1;
 
   private insertMessageStream = new Subject<string>();
   $insertMessage = this.insertMessageStream.asObservable();
 
   constructor(private httpClient: HttpClient) { }
 
-  getReimbs(user: AppUser) {
+  getReimbs(user: AppUser, page: number) {
     console.log(`User at Reimb Service: ${user}`);
     if (!user) {
       return console.log('Not logged in at Reimb Service.');
     } else {
       console.log('Logged in at Reimb Service');
     }
+
+    if (page === 0) {
+      page = this.currentPage;
+    } else {
+      this.currentPage = page;
+    }
+
     if (user.role === 'Manager') {
-      this.httpClient.get<Reimb[]>('http://localhost:8080/ERSProject/fc/reimbursements', {
-        withCredentials: true
+      let getUrl = `http://localhost:8080/ERSProject/fc/reimbursements`;
+      getUrl = getUrl.concat(`?page=${page}`);
+      this.httpClient.get<any>(getUrl, {
+        withCredentials: true,
+        observe: 'response'
       })
         .subscribe(data => {
-          console.log(data);
-          this.currentReimbsStream.next(data);
+          console.log(data.headers);
+          console.log(data.headers.has('X-page'));
+          console.log(data.headers.get('X-page'));
+          console.log(data.body);
+          this.currentReimbsStream.next(data.body);
+          this.maxPage = parseInt(data.headers.get('X-page'), 0);
+          this.maxPageStream.next(this.maxPage);
         }, err => {
           console.log(err);
         });
     } else {
       console.log(user.username);
-      this.httpClient.get<Reimb[]>(`http://localhost:8080/ERSProject/fc/reimbursements?username=${user.username}`, {
-        withCredentials: true
+      let getUrl = `http://localhost:8080/ERSProject/fc/reimbursements`;
+      getUrl = getUrl.concat(`?username=${user.username}`);
+      getUrl = getUrl.concat(`&page=${page}`);
+      console.log(getUrl);
+      this.httpClient.get<any>(getUrl, {
+        withCredentials: true,
+        observe: 'response'
       })
         .subscribe(data => {
-          console.log(data);
-          this.currentReimbsStream.next(data);
+          console.log(data.headers);
+          console.log(data.headers.has('X-page'));
+          console.log(data.headers.get('X-page'));
+          console.log(data.body);
+          this.currentReimbsStream.next(data.body);
+          this.maxPage = parseInt(data.headers.get('X-page'), 0);
+          this.maxPageStream.next(this.maxPage);
         }, err => {
           console.log(err);
         });
@@ -87,7 +115,7 @@ export class ReimbService {
       console.log('Successfully added.');
       message = 'Successfully added reimbursement';
       this.insertMessageStream.next(message);
-      this.getReimbs(user);
+      this.getReimbs(user, this.maxPage);
     }, err => {
       console.log('Request failed.');
       console.log(err);

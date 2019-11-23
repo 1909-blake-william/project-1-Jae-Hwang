@@ -80,6 +80,15 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 	
 	private static final String SELECT_FROM_PAGE_END = 
 							  " WHERE line_number BETWEEN ? AND ?  ORDER BY line_number";
+	
+	private static final String MAX_PAGE_NUM = 
+							  "SELECT count(*) count FROM ers_reimbursement";
+	
+	private static final String MAX_PAGE_NUM_AUTHOR =
+							  "SELECT count(*) count FROM"
+								+ " (SELECT * FROM ers_reimbursement" 
+									+ " JOIN ers_users ON reimb_author = ers_user_id" 
+								+ " WHERE ers_username = ?)";
 // @formatter:on
 
 	private Reimbursement extractReimbursement(ResultSet rs) throws SQLException {
@@ -223,8 +232,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
-					+ " WHERE reimb_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, reimbId);
 
@@ -250,8 +258,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
-					+ " WHERE reimb_author = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_author = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, authorId);
 
@@ -274,8 +281,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
-					+ " WHERE auth.ers_username = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE auth.ers_username = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, author);
 
@@ -293,14 +299,14 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			return null;
 		}
 	}
-	
+
 	@Override
 	public List<Reimbursement> findByAuthorPag(String author, int page) {
 		try {
 			Connection c = connectionUtil.getConnection();
 
 			int rows = page * 10;
-			
+
 			String sql = SELECT_COLUMNS + SELECT_FROM_PAGE_BY_AUTHOR + SELECT_JOINS + SELECT_FROM_PAGE_END;
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setString(1, author);
@@ -329,8 +335,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
-					+ " WHERE reimb_type_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_type_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, typeId);
 
@@ -356,8 +361,7 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 		try {
 			Connection c = connectionUtil.getConnection();
 
-			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS 
-					+ " WHERE reimb_status_id = ? ORDER BY reimb_id";
+			String sql = SELECT_COLUMNS + SELECT_FROM + SELECT_JOINS + " WHERE reimb_status_id = ? ORDER BY reimb_id";
 			PreparedStatement ps = c.prepareStatement(sql);
 			ps.setInt(1, statusId);
 
@@ -411,6 +415,56 @@ public class ReimbursementDaoSQL implements ReimbursementDao {
 			}
 
 			return false;
+		}
+	}
+
+	public String getMaxPage() {
+		log.trace("attempting to get max page number for Find All paginated");
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			String sql = MAX_PAGE_NUM;
+			PreparedStatement ps = c.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				int result = rs.getInt("count");
+				log.trace("number of rows: " + result);
+				return Integer.toString((result-1)/10 +1);
+			}
+
+			return "";
+
+		} catch (SQLException e) {
+			log.debug("connection failed");
+			e.printStackTrace();
+			return null;
+		}
+	}
+
+	public String getMaxPageAuthor(String author) {
+		log.trace("attempting to get max page number for Find by User paginated");
+		try {
+			Connection c = connectionUtil.getConnection();
+
+			String sql = MAX_PAGE_NUM_AUTHOR;
+			PreparedStatement ps = c.prepareStatement(sql);
+			int index = 0;
+			ps.setString(++index, author);
+			ResultSet rs = ps.executeQuery();
+
+			if (rs.next()) {
+				int result = rs.getInt("count");
+				log.trace("number of rows: " + result);
+				return Integer.toString((result-1)/10 +1);
+			}
+
+			return "";
+
+		} catch (SQLException e) {
+			log.debug("connection failed");
+			e.printStackTrace();
+			return null;
 		}
 	}
 

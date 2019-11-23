@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ReimbursmentsComponent } from './components/reimbursments/reimbursments.component';
 import { RoleOptionComponent } from './components/role-option/role-option.component';
+import { PagesComponent } from './components/pages/pages.component';
 
 const routes: Routes = [
   {
@@ -17,6 +17,10 @@ const routes: Routes = [
   {
     path: 'role-option',
     component: RoleOptionComponent
+  },
+  {
+    path: 'pages',
+    component: PagesComponent
   },
   {
     path: '**',

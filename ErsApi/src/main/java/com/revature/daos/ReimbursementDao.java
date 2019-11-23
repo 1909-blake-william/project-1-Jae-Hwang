@@ -30,4 +30,8 @@ public interface ReimbursementDao {
 	
 	boolean update(int reimbId, int statusId, int resolver);
 	
+	String getMaxPage();
+	
+	String getMaxPageAuthor(String author);
+	
 }

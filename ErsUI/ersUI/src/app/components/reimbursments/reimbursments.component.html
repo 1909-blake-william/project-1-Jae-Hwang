@@ -27,29 +27,6 @@
     </tbody>
 </table>
 
-<br>
-<div id="page-box">
-    <nav aria-label="Page navigation example">
-        <ul class="pagination">
-            <li class="page-item">
-                <a class="page-link" aria-label="Previous" (click)="pageDown()">
-                    <span aria-hidden="true">&laquo;</span>
-                    <span class="sr-only">Previous</span>
-                </a>
-            </li>
-            <li [ngClass]="clickedPage(1)"><a class="page-link" (click)="page = 1">1</a></li>
-            <li [ngClass]="clickedPage(2)"><a class="page-link" (click)="page = 2">2</a></li>
-            <li [ngClass]="clickedPage(3)"><a class="page-link" (click)="page = 3">3</a></li>
-            <li class="page-item">
-                <a class="page-link" aria-label="Next" (click)="pageUp()">
-                    <span aria-hidden="true">&raquo;</span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div id="page-box">Page: {{page}}, Max Page: {{maxPage}}</div>
-<br>
+<app-pages></app-pages>
 
 <app-role-option id="role-option-container"></app-role-option>

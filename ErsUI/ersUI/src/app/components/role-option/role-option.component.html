@@ -47,6 +47,7 @@
     </div>
 </form>
 
+
 <!-- Only Visible to Managers -->
 <form id="reimb-form" *ngIf="currentUser.role === 'Manager'">
     <div class="form-row thead-dark" id="reimb-form-head">
@@ -57,7 +58,8 @@
             <button ngbDropdown class="d-inline-block btn btn-secondary col" id="reimb-id-button">
                 <a class="nav-link dropdown-toggle" id="reimb-update-drop" ngbDropdownToggle>{{updateDropMessage}}</a>
                 <div ngbDropdownMenu aria-labelledby="reimb-update-drop">
-                    <button class="dropdown-item" *ngFor="let reimb of currentTable"
+                    <button class="dropdown-item" 
+                        *ngFor="let reimb of currentUpdate"
                         (click)="selectUpdateDropdown(reimb)">
                         {{reimb.reimbId}} : {{reimb.reimbAmount}} by {{reimb.reimbAuthor}}
                     </button>
@@ -69,7 +71,6 @@
             <button ngbDropdown class="d-inline-block btn btn-secondary col" id="reimb-status-button">
                 <a class="nav-link dropdown-toggle" id="status-update-drop" ngbDropdownToggle>{{updateStatusDrop}}</a>
                 <div ngbDropdownMenu aria-labelledby="status-update-drop">
-                    <button class="dropdown-item" (click)="selectStatusDropdown(1)">Requested</button>
                     <button class="dropdown-item" (click)="selectStatusDropdown(2)">Pending</button>
                     <button class="dropdown-item" (click)="selectStatusDropdown(3)">Denied</button>
                     <button class="dropdown-item" (click)="selectStatusDropdown(4)">Approved</button>

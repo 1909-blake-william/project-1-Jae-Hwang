@@ -1,0 +1,19 @@
+
+#page-box {
+    display: flex;
+    justify-content: center;
+}
+
+li.active {
+    a {
+        background-color: #3c4044;
+        border-color: #3c4044;
+        color: white;
+    }
+}
+
+li.active:hover {
+    a {
+        font-weight: bold;
+    }
+}

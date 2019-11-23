@@ -14,6 +14,7 @@ import { UpdateService } from './services/update.service';
 import { ReimbursmentsComponent } from './components/reimbursments/reimbursments.component';
 import { ReimbService } from './services/reimb.service';
 import { RoleOptionComponent } from './components/role-option/role-option.component';
+import { PagesComponent } from './components/pages/pages.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { RoleOptionComponent } from './components/role-option/role-option.compon
     LoginComponent,
     ReimbursmentsComponent,
     RoleOptionComponent,
+    PagesComponent,
   ],
   imports: [
     BrowserModule,

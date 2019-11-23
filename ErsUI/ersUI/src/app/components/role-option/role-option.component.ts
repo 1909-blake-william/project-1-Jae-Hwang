@@ -29,11 +29,13 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
   currentTable: Reimb[];
   tableSubscription: Subscription;
 
+  currentUpdate: Reimb[];
+
   updateDropSelected: Reimb;
   updateDropMessage = 'Select Reimbursement';
 
-  updateStatusDrop = 'Select Status';
   updateStatusId: number;
+  updateStatusDrop = 'Select Status';
 
   constructor(
     private updateServie: UpdateService,
@@ -44,11 +46,17 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
     this.userSubscription = this.authService.$currentUser.subscribe(user => {
       this.currentUser = user;
     });
+
     this.insertSubscription = this.reimbService.$insertMessage.subscribe(msg => {
       this.inputForm.message = msg;
     });
+
     this.tableSubscription = this.reimbService.$currentReimbs.subscribe(reimbs => {
       this.currentTable = reimbs;
+      this.currentUpdate = reimbs.filter(reimb => {
+        return reimb.reimbStatus === 'Pending' || reimb.reimbStatus === 'Requested';
+      });
+
     });
   }
 
@@ -75,6 +83,12 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
       this.inputForm.reimbAmount,
       this.inputForm.reimbType,
       this.inputForm.reimbDesc);
+
+    // reset values
+    this.inputForm.reimbAmount = 0;
+    this.inputForm.reimbType = 'Type';
+    this.insertTypeDrop = 'Select Type';
+    this.inputForm.reimbDesc = 'Description';
   }
 
   selectTypeDropdown(selected: string) {
@@ -85,8 +99,17 @@ export class RoleOptionComponent implements OnInit, OnDestroy {
   // -- Manager Methods -- //
   callUpdate() {
     if (this.updateDropSelected && this.updateStatusId) {
-      this.updateServie.updateReimb(this.currentUser, this.updateDropSelected, this.updateStatusId);
+      this.updateServie.updateReimb(
+        this.currentUser,
+        this.updateDropSelected,
+        this.updateStatusId);
     }
+
+    // reset values
+    this.updateDropSelected = undefined;
+    this.updateStatusId = undefined;
+    this.updateDropMessage = 'Select Reimbursement';
+    this.updateStatusDrop = 'Select Status';
   }
 
   selectUpdateDropdown(selected: Reimb) {

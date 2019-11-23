@@ -13,9 +13,6 @@ import { Router } from '@angular/router';
 })
 export class ReimbursmentsComponent implements OnInit, OnDestroy {
 
-  page = 2;
-  maxPage = 3;
-
   currentUser: AppUser;
   userSubscription: Subscription;
 
@@ -40,7 +37,7 @@ export class ReimbursmentsComponent implements OnInit, OnDestroy {
       console.log(this.currentUser);
     }
 
-    this.reimbService.getReimbs(this.currentUser);
+    this.reimbService.getReimbs(this.currentUser, 1);
 
     this.tableSubscription = this.reimbService.$currentReimbs.subscribe(reimbs => {
       this.currentTable = reimbs;
@@ -53,26 +50,6 @@ export class ReimbursmentsComponent implements OnInit, OnDestroy {
     }
     if (this.tableSubscription !== undefined) {
       this.tableSubscription.unsubscribe();
-    }
-  }
-
-  clickedPage(num: number) {
-    if (this.page === num) {
-      return 'page-item active';
-    } else {
-      return 'page-item';
-    }
-  }
-
-  pageUp() {
-    if (this.page < this.maxPage) {
-      this.page++;
-    }
-  }
-
-  pageDown() {
-    if (this.page > 1) {
-      this.page--;
     }
   }
 }
